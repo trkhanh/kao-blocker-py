@@ -24,7 +24,7 @@ def get_os_path(i):
     return switcher.get(i, "Invalid Os")
 
 # CONFIG HERE !!!!!!!!!!!!! ⚙
-host_pathname = get_os_path('mac')
+host_pathname = get_os_path('window')
 
 redirect = "127.0.0.1"
 blocked_websites = ["www.twitter.com", "twitter.com",
