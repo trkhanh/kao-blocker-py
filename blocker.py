@@ -12,6 +12,20 @@ host_pathname = r"C:\Windows\System32\drivers\etc\hosts"
 # Path for linux
 # host_pathname = r"/etc/hosts"
 
+your_os = "window"
+
+
+def get_os_path(i):
+    switcher = {
+        'window': r"C:\Windows\System32\drivers\etc\hosts",
+        'mac': r"/private/etc/hosts",
+        'linux': r"/etc/hosts",
+    }
+    return switcher.get(i, "Invalid Os")
+
+# CONFIG HERE !!!!!!!!!!!!! ⚙
+host_pathname = get_os_path('mac')
+
 redirect = "127.0.0.1"
 blocked_websites = ["www.twitter.com", "twitter.com",
                     "facebook.com", "www.facebook.com", "https://www.facebook.com"]
