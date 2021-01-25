@@ -23,10 +23,18 @@ def get_os_path(i):
     }
     return switcher.get(i, "Invalid Os")
 
-# CONFIG HERE !!!!!!!!!!!!! ⚙
-host_pathname = get_os_path('window')
 
+"""CONFIG HERE
+    @blocked_websites: For list of site to block
+    @redirect: Redirect to default => someMovation.html
+    #YOUR_OS: Your OS
+"""
+YOUR_OS = 'window'
+# CONFIG HERE !!!!!!!!!!!!! ⚙
+host_pathname = get_os_path(YOUR_OS)
+# CONFIG HERE !!!!!!!!!!!!! ⚙
 redirect = "127.0.0.1"
+# CONFIG HERE !!!!!!!!!!!!! ⚙
 blocked_websites = ["www.twitter.com", "twitter.com",
                     "facebook.com", "www.facebook.com", "https://www.facebook.com"]
 
