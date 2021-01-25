@@ -20,4 +20,7 @@
 
 # localhost name resolution is handled within DNS itself.
 #	127.0.0.1       localhost
-#	::1             localhost
+#	::1             localhost127.0.0.1 www.twitter.com
+127.0.0.1 twitter.com
+127.0.0.1 facebook.com
+127.0.0.1 www.facebook.com

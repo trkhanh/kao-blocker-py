@@ -1,19 +1,20 @@
-import time 
-from datetime import datetime 
+import time
+from datetime import datetime
 # Development hosts
-dev_host_pathname="hosts"
+dev_host_pathname = "hosts"
 
 # Path for Windows Operating System
-host_pathname=r"C:\Windows\System32\drivers\etc\hosts"
-redirect="127.0.0.1"
-blocked_websites=["www.twitter.com", "twitter.com", "facebook.com", "www.facebook.com"]
+host_pathname = r"C:\Windows\System32\drivers\etc\hosts"
+redirect = "127.0.0.1"
+blocked_websites = ["www.twitter.com", "twitter.com",
+                    "facebook.com", "www.facebook.com", "https://www.facebook.com"]
 
 
 # Accessing and reassigning DateTime
 current_year = datetime.now().year
 current_month = datetime.now().month
 current_day = datetime.now().day
-start_time =  8
+start_time = 8
 end_time = 16
 
 """
@@ -26,11 +27,16 @@ while True:
         print("Working hours activated...")
         with open(dev_host_pathname, 'r+') as file:
             content = file.read()
+            # print(content)
             for website in blocked_websites:
                 if website in content:
                     pass
                 else:
-                    file.write(redirect + " " + website+"\n")
+                    try:
+                        file.write(redirect + " " + website+"\n")
+                    except e:
+                        print("Something went wrong")
+
     else:
         with open(dev_host_pathname, 'r+') as file:
             content = file.readlines()
